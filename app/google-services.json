@@ -8,9 +8,38 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:685455443550:android:8d73e5c2326db1266f56cf",
+        "mobilesdk_app_id": "1:685455443550:android:36fea7829a9ca8906f56cf",
         "android_client_info": {
           "package_name": "com.example.quanlycuahangtrasua"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "685455443550-5mc5n0dm647rg94jnuapn3sj0u15f3qs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD1iAWy5zBQ9bPpsnJZaoOr_zN7H1lhJLo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "685455443550-5mc5n0dm647rg94jnuapn3sj0u15f3qs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685455443550:android:4861aabdc79c08df6f56cf",
+        "android_client_info": {
+          "package_name": "com.example.quanlycuahangtrasuacopy"
         }
       },
       "oauth_client": [
