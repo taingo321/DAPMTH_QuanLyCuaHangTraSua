@@ -1,12 +1,30 @@
 package com.example.quanlycuahangtrasua;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.HashMap;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    private Button register_button;
+    private Button register;
     private EditText register_username_input, register_phone_input, register_password_input;
     private ProgressDialog loadingBar;
 
@@ -15,13 +33,13 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        register_button = findViewById(R.id.register_button);
+        register = findViewById(R.id.register);
         register_username_input = findViewById(R.id.register_username_input);
         register_phone_input = findViewById(R.id.register_phone_input);
         register_password_input = findViewById(R.id.register_password_input);
         loadingBar = new ProgressDialog(this);
 
-        register_button.setOnClickListener(new View.OnClickListener() {
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CreateAccount();
@@ -74,25 +92,25 @@ public class RegisterActivity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
-                                        Toast.makeText(Register.this, "Tài khoản của bạn đã tạo thành công", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Tài khoản của bạn đã tạo thành công", Toast.LENGTH_SHORT).show();
                                         loadingBar.dismiss();
 
-                                        Intent intent = new Intent(Register.this, Login.class);
+                                        Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                         startActivity(intent);
                                     }
                                     else {
                                         loadingBar.dismiss();
-                                        Toast.makeText(Register.this, "Đã xảy ra lỗi,vui lòng thử lại", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(RegisterActivity.this, "Đã xảy ra lỗi,vui lòng thử lại", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             });
                 }
                 else {
-                    Toast.makeText(Register.this, "Tên tài khoản " + phone + " đã tồn tại.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Tên tài khoản " + phone + " đã tồn tại.", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
-                    Toast.makeText(Register.this, "Vui lòng thử lại", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Vui lòng thử lại", Toast.LENGTH_SHORT).show();
 
-                    Intent intent = new Intent(Register.this, Login.class);
+                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                     startActivity(intent);
                 }
             }
