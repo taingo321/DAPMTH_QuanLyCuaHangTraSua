@@ -106,7 +106,7 @@ public class RegisterActivity extends AppCompatActivity {
                             });
                 }
                 else {
-                    Toast.makeText(RegisterActivity.this, "Tên tài khoản " + phone + " đã tồn tại.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RegisterActivity.this, "Tên tài khoản " + username + " đã tồn tại.", Toast.LENGTH_SHORT).show();
                     loadingBar.dismiss();
                     Toast.makeText(RegisterActivity.this, "Vui lòng thử lại", Toast.LENGTH_SHORT).show();
 
