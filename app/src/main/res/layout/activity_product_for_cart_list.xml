@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/dot_background"
-    tools:context=".ProductListActivity">
+    tools:context=".ProductForCartListActivity">
 
     <LinearLayout
         android:id="@+id/TeaMenu"
@@ -52,7 +52,7 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvProductList"
+            android:id="@+id/rvProductForCartList"
             android:layout_width="match_parent"
             android:layout_height="470dp"
             android:layout_margin="8dp"
