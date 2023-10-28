@@ -130,7 +130,7 @@
                                 android:background="@drawable/oval_background">
 
                                 <ImageView
-                                    android:id="@+id/ivAddProduct"
+                                    android:id="@+id/ivAddProductToCart"
                                     android:layout_width="40sp"
                                     android:layout_height="40sp"
                                     app:layout_constraintBottom_toBottomOf="parent"
