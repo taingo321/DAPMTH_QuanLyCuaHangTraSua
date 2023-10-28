@@ -10,10 +10,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.quanlycuahangtrasua.Model.Products;
 import com.example.quanlycuahangtrasua.ViewHolder.ProductForCartViewHolder;
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 public class ProductListActivity extends AppCompatActivity {
     private DatabaseReference ProductsForCartRef;
