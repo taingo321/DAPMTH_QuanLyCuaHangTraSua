@@ -30,7 +30,7 @@
             android:name=".ProductMenuSubModuleActivity"
             android:exported="false"/>
         <activity
-            android:name=".ProductListActivity"
+            android:name=".ProductForCartListActivity"
             android:exported="false"/>
         <activity
             android:name=".MainActivity"

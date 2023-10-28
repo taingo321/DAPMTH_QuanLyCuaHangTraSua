@@ -18,7 +18,7 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
-public class ProductListActivity extends AppCompatActivity {
+public class ProductForCartListActivity extends AppCompatActivity {
     private DatabaseReference ProductsForCartRef;
     private RecyclerView rvProductForCartList;
     RecyclerView.LayoutManager layoutManager;
@@ -26,7 +26,7 @@ public class ProductListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_list);
+        setContentView(R.layout.activity_product_for_cart_list);
 
         ProductsForCartRef = FirebaseDatabase.getInstance().getReference().child("Products");
         rvProductForCartList = findViewById(R.id.rvProductForCartList);

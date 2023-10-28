@@ -21,7 +21,7 @@ public class ProductMenuSubModuleActivity extends AppCompatActivity {
         ivAddProductToCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ProductMenuSubModuleActivity.this, ProductListActivity.class);
+                Intent intent = new Intent(ProductMenuSubModuleActivity.this, ProductForCartListActivity.class);
                 startActivity(intent);
             }
         });
