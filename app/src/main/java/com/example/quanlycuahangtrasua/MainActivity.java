@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         ivProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent intent = new Intent(MainActivity.this, ProductMenuSubModule.class);
-                //startActivity(intent);
+                Intent intent = new Intent(MainActivity.this, ProductMenuSubModuleActivity.class);
+                startActivity(intent);
             }
         });
     }
