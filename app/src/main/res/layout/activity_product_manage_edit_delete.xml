@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity_product_manage_edit_delete">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/product_Image_edit_delete"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="2dp"/>
+
+        <EditText
+            android:id="@+id/product_Name_edit_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_Image_edit_delete"
+            android:hint="Product Name"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/product_Price_edit_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_Name_edit_delete"
+            android:hint="Product Price"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:layout_margin="5dp"
+            android:textStyle="bold"/>
+
+        <EditText
+            android:id="@+id/product_Ingre_edit_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_Price_edit_delete"
+            android:hint="Product Ingre"
+            android:textAlignment="center"
+            android:layout_margin="5dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:paddingTop="2dp"/>
+
+        <Button
+            android:id="@+id/apply_change_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/product_Ingre_edit_delete"
+            android:text="Apply Change"
+            android:textAlignment="center"
+            android:layout_margin="5dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:paddingTop="2dp"/>
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/apply_change_button"
+            android:text="Delete"
+            android:textAlignment="center"
+            android:layout_margin="5dp"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:paddingTop="2dp"/>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
