@@ -33,3 +33,4 @@ public class ProductForCartViewHolder extends RecyclerView.ViewHolder implements
         listener.onClick(v, getAdapterPosition(), false);
     }
 }
+
