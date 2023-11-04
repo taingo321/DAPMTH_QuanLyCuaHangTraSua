@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class ProductManagement extends AppCompatActivity {
+public class ProductManagementActivity extends AppCompatActivity {
 
     private FloatingActionButton fabAddProduct;
     private DatabaseReference ProductsManagementRef;
