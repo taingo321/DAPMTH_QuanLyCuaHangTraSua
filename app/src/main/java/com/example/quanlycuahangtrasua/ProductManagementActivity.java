@@ -52,14 +52,15 @@ public class ProductManagementActivity extends AppCompatActivity {
                 holder.productIngre.setText(model.getPrice());
                 Picasso.get().load(model.getImage()).into(holder.productImage);
 
-                holder.itemView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent intent = new Intent(ProductManagement.this, ProductDetail.class);
-                        intent.putExtra("pid", model.getPid());
-                        startActivity(intent);
-                    }
-                });
+                //Xóa comment dòng này
+            /*holder.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent = new Intent(ProductManagement.this, ProductDetail.class);
+                    intent.putExtra("pid", model.getPid());
+                    startActivity(intent);
+                }
+            });*/
             }
 
             @NonNull
