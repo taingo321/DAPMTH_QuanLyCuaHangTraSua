@@ -1,24 +1,15 @@
 package com.example.quanlycuahangtrasua;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.quanlycuahangtrasua.Model.Products;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
-public class ProductManagement extends AppCompatActivity {
+public class ProductManagementActivity extends AppCompatActivity {
 
     private FloatingActionButton fabAddProduct;
     private DatabaseReference ProductsManagementRef;
@@ -40,7 +31,7 @@ public class ProductManagement extends AppCompatActivity {
         fabAddProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ProductManagement.this, AddNewProductActivity.class);
+                Intent intent = new Intent(ProductManagement.this, AddNewProduct.class);
                 startActivity(intent);
             }
         });
