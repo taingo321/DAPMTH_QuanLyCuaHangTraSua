@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    ImageView ivProduct, ivCart, ivInvoice, ivStaff;
+    ImageView ivProduct, ivCart, ivLogout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,13 +17,19 @@ public class MainActivity extends AppCompatActivity {
 
         ivProduct = findViewById(R.id.ivProduct);
         ivCart = findViewById(R.id.ivCart);
-        ivInvoice = findViewById(R.id.ivInvoice);
-        ivStaff = findViewById(R.id.ivStaff);
+        ivLogout = findViewById(R.id.ivLogout);
 
         ivProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ProductMenuSubModuleActivity.class);
+                Intent intent = new Intent(MainActivity.this, ProductActivity.class);
+                startActivity(intent);
+            }
+        });
+        ivLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivity(intent);
             }
         });

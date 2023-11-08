@@ -10,7 +10,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 import com.example.quanlycuahangtrasua.Model.Products;
 import com.example.quanlycuahangtrasua.ViewHolder.ProductViewHolder;
@@ -21,9 +20,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
-public class ProductManagementActivity extends AppCompatActivity {
+public class ProductActivity extends AppCompatActivity {
 
-    private FloatingActionButton fabAddProduct;
+    //private FloatingActionButton fabAddProduct;
     private DatabaseReference ProductsManagementRef;
     private RecyclerView rvProductListManagement;
     RecyclerView.LayoutManager layoutManager;
@@ -31,7 +30,7 @@ public class ProductManagementActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_management);
+        setContentView(R.layout.activity_product);
 
         ProductsManagementRef = FirebaseDatabase.getInstance().getReference().child("Products");
         rvProductListManagement = findViewById(R.id.rvProductListManagement);
@@ -39,14 +38,14 @@ public class ProductManagementActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         rvProductListManagement.setLayoutManager(layoutManager);
 
-        fabAddProduct = findViewById(R.id.fabAddProduct);
+        /*fabAddProduct = findViewById(R.id.fabAddProduct);
         fabAddProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ProductManagementActivity.this, AddNewProductActivity.class);
+                Intent intent = new Intent(ProductActivity.this, AddNewProductActivity.class);
                 startActivity(intent);
             }
-        });
+        }); */
     }
 
     @Override
@@ -67,7 +66,7 @@ public class ProductManagementActivity extends AppCompatActivity {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(ProductManagementActivity.this, ProductDetailActivity.class);
+                        Intent intent = new Intent(ProductActivity.this, ProductDetailActivity.class);
                         intent.putExtra("pid", model.getPid());
                         startActivity(intent);
                     }

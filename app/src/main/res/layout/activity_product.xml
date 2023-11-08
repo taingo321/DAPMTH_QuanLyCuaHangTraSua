@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/dot_background"
-    tools:context=".ProductManagementActivity">
+    tools:context=".ProductActivity">
 
     <LinearLayout
         android:id="@+id/TeaMenu"
@@ -61,7 +61,7 @@
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <!--com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -70,5 +70,5 @@
         android:src="@drawable/add"
         app:backgroundTint="@color/teal_200"
         app:tint="@android:color/white"
-        app:elevation="6dp" />
+        app:elevation="6dp"/-->
 </FrameLayout>

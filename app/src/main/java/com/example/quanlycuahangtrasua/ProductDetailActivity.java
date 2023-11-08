@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-public class activity_product_detail extends AppCompatActivity {
+public class ProductDetailActivity extends AppCompatActivity {
 
     private ImageView product_Image_Detail;
     private TextView product_Name_Detail, product_Ingre_Detail, product_Price_Detail;

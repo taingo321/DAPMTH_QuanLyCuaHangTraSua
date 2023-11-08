@@ -161,7 +161,7 @@ public class AddNewProductActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         if (task.isSuccessful()){
-                            Intent intent = new Intent(AddNewProductActivity.this, ProductMenuSubModuleActivity.class);
+                            Intent intent = new Intent(AddNewProductActivity.this, AdminActivity.class);
                             startActivity(intent);
                             Toast.makeText(AddNewProductActivity.this, "Thêm sản phẩm mới thành công", Toast.LENGTH_SHORT).show();
                         }else {

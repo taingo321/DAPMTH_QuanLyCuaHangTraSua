@@ -11,12 +11,11 @@ import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.quanlycuahangtrasua.Model.Users;
+import com.example.quanlycuahangtrasua.Prevalent.Prevalent;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
@@ -31,7 +30,8 @@ public class LoginActivity extends AppCompatActivity {
     private TextInputLayout layusername,laypassword;
     private ProgressDialog loadingBar;
     private AppCompatButton login_button;
-    private TextView ChangeToReg;
+    private TextView admin_panel_link, not_admin_panel_link;
+    //private TextView ChangeToReg;
     private String parentDBName = "Users";
     boolean isValidUsername,isValidPassword=false;
 
@@ -41,7 +41,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         login_button = findViewById(R.id.login_button);
-        ChangeToReg = findViewById(R.id.tvChangeToReg);
+        //ChangeToReg = findViewById(R.id.tvChangeToReg);
         layusername= findViewById(R.id.til_UserName_log);
         laypassword=findViewById(R.id.til_Pass_log);
         login_username_input = findViewById(R.id.edt_UserName_log);
@@ -51,6 +51,8 @@ public class LoginActivity extends AppCompatActivity {
 
         login_username_input.addTextChangedListener(new LoginActivity.UsernameTextWatcher());
         login_password_input.addTextChangedListener(new LoginActivity.PasswordTextWatcher());
+        admin_panel_link = findViewById(R.id.admin_panel_link);
+        not_admin_panel_link = findViewById(R.id.not_admin_panel_link);
         login_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,14 +62,33 @@ public class LoginActivity extends AppCompatActivity {
 
             }
         });
+        admin_panel_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                login_button.setText("Đăng nhập Admin");
+                admin_panel_link.setVisibility(View.INVISIBLE);
+                not_admin_panel_link.setVisibility(View.VISIBLE);
+                parentDBName = "Admins";
+            }
+        });
 
-        ChangeToReg.setOnClickListener(new View.OnClickListener() {
+        not_admin_panel_link.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                login_button.setText("Đăng nhập");
+                admin_panel_link.setVisibility(View.VISIBLE);
+                not_admin_panel_link.setVisibility(View.INVISIBLE);
+                parentDBName = "Users";
+            }
+        });
+
+        /*ChangeToReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
     }
 
@@ -159,11 +180,20 @@ public class LoginActivity extends AppCompatActivity {
 
                     if (usersData.getUsername().equals(username)){
                         if (usersData.getPassword().equals(password)){
-                            if (parentDBName.equals("Users")){
+                            if (parentDBName.equals("Admins")){
+                                Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
+                                loadingBar.dismiss();
+
+                                Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
+                                Prevalent.currentOnlineUser = usersData;
+                                startActivity(intent);
+                            }
+                            else if (parentDBName.equals("Users")){
                                 Toast.makeText(LoginActivity.this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
                                 loadingBar.dismiss();
 
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                                Prevalent.currentOnlineUser = usersData;
                                 startActivity(intent);
                             }
 
