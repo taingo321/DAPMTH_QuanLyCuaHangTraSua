@@ -12,13 +12,16 @@
         android:theme="@style/Theme.QuanLyCuaHangTraSua"
         tools:targetApi="31">
         <activity
-            android:name=".activity_product_manage_edit_delete"
+            android:name=".AdminActivity"
             android:exported="false" />
         <activity
-            android:name=".activity_product_detail"
+            android:name=".AdminMaintainActivity"
             android:exported="false" />
         <activity
-            android:name=".ProductManagementActivity"
+            android:name=".ProductDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProductActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
@@ -31,12 +34,6 @@
         </activity>
         <activity
             android:name=".RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProductMenuSubModuleActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ProductForCartListActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

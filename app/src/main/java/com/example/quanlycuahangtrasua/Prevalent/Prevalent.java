@@ -1,8 +1,8 @@
-package com.example.quanlycuahangtrasua.Prevelent;
+package com.example.quanlycuahangtrasua.Prevalent;
 
 import com.example.quanlycuahangtrasua.Model.Users;
 
-public class Prevelent {
+public class Prevalent {
     public static Users currentOnlineUser;
 
     public static final String UserNameKey = "Username";
