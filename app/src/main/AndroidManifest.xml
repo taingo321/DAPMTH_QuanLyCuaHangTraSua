@@ -12,7 +12,7 @@
         android:theme="@style/Theme.QuanLyCuaHangTraSua"
         tools:targetApi="31">
         <activity
-            android:name=".CartActivity"
+            android:name=".Confirm_order_activity"
             android:exported="false" />
         <activity
             android:name=".AdminActivity"
