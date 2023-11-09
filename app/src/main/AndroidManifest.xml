@@ -12,6 +12,9 @@
         android:theme="@style/Theme.QuanLyCuaHangTraSua"
         tools:targetApi="31">
         <activity
+            android:name=".Confirm_order_activity"
+            android:exported="false" />
+        <activity
             android:name=".AdminActivity"
             android:exported="false" />
         <activity
