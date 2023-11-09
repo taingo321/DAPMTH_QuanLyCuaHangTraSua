@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashMap;
 
-public class Confirm_order_activity extends AppCompatActivity {
+public class ConfirmOrderActivity extends AppCompatActivity {
 
     private EditText note_input;
     private String orderKey;
@@ -83,9 +83,9 @@ public class Confirm_order_activity extends AppCompatActivity {
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()){
-                                        Toast.makeText(Confirm_order_activity.this, "Đặt món thành công", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(ConfirmOrderActivity.this, "Đặt món thành công", Toast.LENGTH_SHORT).show();
 
-                                        Intent intent = new Intent(Confirm_order_activity.this, MainActivity.class);
+                                        Intent intent = new Intent(ConfirmOrderActivity.this, MainActivity.class);
                                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                         startActivity(intent);
                                         finish();
