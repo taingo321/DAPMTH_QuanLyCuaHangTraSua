@@ -1,13 +1,13 @@
 package com.example.quanlycuahangtrasua.ViewHolder;
 
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.quanlycuahangtrasua.Interface.ItemClickListener;
 import com.example.quanlycuahangtrasua.R;
-import com.rey.material.widget.TextView;
 
 public class CartViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
     public TextView product_Name_Cart, product_Quantity_Cart, product_Price_Cart;
