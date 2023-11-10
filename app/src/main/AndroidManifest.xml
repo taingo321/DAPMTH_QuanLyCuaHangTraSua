@@ -16,7 +16,7 @@
             android:exported="false" />
         <activity
             android:name=".CartActivity"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".AdminActivity"
             android:exported="false" />
