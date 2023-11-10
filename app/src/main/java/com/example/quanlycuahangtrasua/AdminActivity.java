@@ -16,7 +16,7 @@ public class AdminActivity extends AppCompatActivity {
 
         ivAddProduct = findViewById(R.id.ivAddProduct);
         ivLogout = findViewById(R.id.ivLogout);
-
+        ivInvoice = findViewById(R.id.ivInvoice);
         ivAddProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -28,6 +28,13 @@ public class AdminActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AdminActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+        ivInvoice.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminActivity.this, AdminOrderActivity.class);
                 startActivity(intent);
             }
         });
