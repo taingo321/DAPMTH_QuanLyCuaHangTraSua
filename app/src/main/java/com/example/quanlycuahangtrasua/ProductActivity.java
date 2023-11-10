@@ -26,6 +26,7 @@ public class ProductActivity extends AppCompatActivity {
     private DatabaseReference ProductsManagementRef;
     private RecyclerView rvProductListManagement;
     RecyclerView.LayoutManager layoutManager;
+    private String type = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,14 +39,12 @@ public class ProductActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         rvProductListManagement.setLayoutManager(layoutManager);
 
-        /*fabAddProduct = findViewById(R.id.fabAddProduct);
-        fabAddProduct.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ProductActivity.this, AddNewProductActivity.class);
-                startActivity(intent);
-            }
-        }); */
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if (bundle != null){
+            type = getIntent().getExtras().get("Admin").toString();
+        }
+
     }
 
     @Override
@@ -66,9 +65,17 @@ public class ProductActivity extends AppCompatActivity {
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent intent = new Intent(ProductActivity.this, ProductDetailActivity.class);
-                        intent.putExtra("pid", model.getPid());
-                        startActivity(intent);
+                        if (type.equals("Admin")){
+                            Intent intent = new Intent(ProductActivity.this, AdminMaintainActivity.class);
+                            intent.putExtra("pid", model.getPid());
+                            startActivity(intent);
+                        }
+                        else {
+                            Intent intent = new Intent(ProductActivity.this, ProductDetailActivity.class);
+                            intent.putExtra("pid", model.getPid());
+                            startActivity(intent);
+                        }
+
                     }
                 });
             }

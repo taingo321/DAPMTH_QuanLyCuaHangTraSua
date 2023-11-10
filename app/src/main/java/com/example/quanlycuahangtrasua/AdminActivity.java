@@ -8,19 +8,28 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class AdminActivity extends AppCompatActivity {
-    ImageView ivAddProduct, ivMaintain, ivInvoice, ivLogout;
+    ImageView ivAddProduct, ivMaintain, ivLogout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
 
         ivAddProduct = findViewById(R.id.ivAddProduct);
+        ivMaintain = findViewById(R.id.ivMaintain);
         ivLogout = findViewById(R.id.ivLogout);
 
         ivAddProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AdminActivity.this, AddNewProductActivity.class);
+                startActivity(intent);
+            }
+        });
+        ivMaintain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminActivity.this, ProductActivity.class);
+                intent.putExtra("Admin", "Admin");
                 startActivity(intent);
             }
         });
