@@ -58,7 +58,7 @@ public class ProductActivity extends AppCompatActivity {
             @Override
             protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull Products model) {
                 holder.productName.setText(model.getPname());
-                holder.productPrice.setText(model.getPrice());
+                holder.productPrice.setText(model.getPrice() + "đ");
                 holder.productIngre.setText(model.getPrice());
                 Picasso.get().load(model.getImage()).into(holder.productImage);
 
