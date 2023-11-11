@@ -20,11 +20,11 @@
 
 ## Công nghệ sử dụng
 - [Android Studio](https://developer.android.com/studio)
-- [Github](https://github.com/travijuu/NumberPicker)
-- [Github](https://github.com/hdodenhof/CircleImageView)
-- [Github](https://github.com/square/picasso)
-- [Github](https://github.com/greenrobot/EventBus)
-- [Github](https://github.com/bumptech/glide)
+- [NumberPicker](https://github.com/travijuu/NumberPicker)
+- [CircleImageView](https://github.com/hdodenhof/CircleImageView)
+- [Picasso](https://github.com/square/picasso)
+- [EventBus](https://github.com/greenrobot/EventBus)
+- [Glide](https://github.com/bumptech/glide)
 - [Firebase](https://console.firebase.google.com/u/0/)
 
 ## Thành viên
