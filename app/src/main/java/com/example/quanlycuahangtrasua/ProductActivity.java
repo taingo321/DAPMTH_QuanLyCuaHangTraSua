@@ -22,7 +22,6 @@ import com.squareup.picasso.Picasso;
 
 public class ProductActivity extends AppCompatActivity {
 
-    //private FloatingActionButton fabAddProduct;
     private DatabaseReference ProductsManagementRef;
     private RecyclerView rvProductListManagement;
     RecyclerView.LayoutManager layoutManager;
@@ -57,7 +56,16 @@ public class ProductActivity extends AppCompatActivity {
         FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter = new FirebaseRecyclerAdapter<Products, ProductViewHolder>(options) {
             @Override
             protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull Products model) {
-                holder.productName.setText(model.getPname());
+                String originalName = model.getPname();
+                int maxLength = 20;
+
+                if (originalName.length() > maxLength) {
+                    String truncatedName = originalName.substring(0, maxLength - 3) + "...";
+                    holder.productName.setText(truncatedName);
+                } else {
+                    holder.productName.setText(originalName);
+                }
+                //holder.productName.setText(model.getPname());
                 holder.productPrice.setText(model.getPrice() + "đ");
                 holder.productIngre.setText(model.getPrice());
                 Picasso.get().load(model.getImage()).into(holder.productImage);
