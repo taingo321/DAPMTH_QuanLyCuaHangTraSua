@@ -13,25 +13,40 @@
         tools:targetApi="31">
         <activity
             android:name=".ConfirmOrderActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Trang xác nhận hóa đơn"/>
         <activity
             android:name=".CartActivity"
-            android:exported="false"/>
+            android:exported="false"
+            android:label="Trang giỏ hàng"/>
         <activity
             android:name=".AdminActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Trang quản lý"/>
         <activity
             android:name=".AdminMaintainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Trang chỉnh sửa sản phẩm"/>
+        <activity
+            android:name=".AdminOrderActivity"
+            android:exported="false"
+            android:label="Trang quản lý hóa đơn"/>
+        <activity
+            android:name=".AdminOrderProductsDetailActivity"
+            android:exported="false"
+            android:label="Trang chi tiết hóa đơn"/>
         <activity
             android:name=".ProductDetailActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Trang chi tiết sản phẩm"/>
         <activity
             android:name=".ProductActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Trang sản phẩm"/>
         <activity
             android:name=".LoginActivity"
-            android:exported="true">
+            android:exported="true"
+            android:label="Trang đăng nhập">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -43,10 +58,12 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Trang chủ"/>
         <activity
             android:name=".AddNewProductActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Trang thêm sản phẩm"/>
     </application>
 
 </manifest>

@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class AdminActivity extends AppCompatActivity {
-    ImageView ivAddProduct, ivMaintain, ivLogout;
+    ImageView ivAddProduct, ivMaintain, ivInvoice, ivLogout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
