@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:numberpicker="http://schemas.android.com/apk/res-auto"
-    tools:context=".ProductDetail">>
+    tools:context=".ProductDetailActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -78,6 +78,7 @@
                 android:layout_height="40dp"
                 android:layout_marginStart="270dp"
                 android:layout_marginEnd="20dp"
+                android:layout_gravity="end"
                 numberpicker:focusable="false"
                 numberpicker:max="100"
                 numberpicker:min="1"
@@ -96,7 +97,6 @@
                 android:textColor="@color/black"
                 android:textSize="18dp" />
         </LinearLayout>
-
     </ScrollView>
 
 
