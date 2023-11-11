@@ -46,7 +46,7 @@
         <activity
             android:name=".LoginActivity"
             android:exported="true"
-            android:label="Trang đăng nhập">
+            android:label="Quản lý cửa hàng trà sữa">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
