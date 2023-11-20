@@ -5,7 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Tìm kiếm sản phẩm..."
+        android:layout_margin="16dp"/>
     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
